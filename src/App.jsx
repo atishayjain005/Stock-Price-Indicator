@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import StockPrice from "./components/stockPrice";
-import Pagination from "./components/pagination";
+import StockPrice from "./components/StockPrice";
+import Pagination from "./components/Pagination";
 import Chart from "./components/Chart";
 
 import "./App.css";
@@ -32,7 +32,7 @@ function App() {
 
   const handleFetchData = async () => {
     const response = await fetch(
-      "https://f68370a9-1a80-4b78-b83c-8cb61539ecd6.mock.pstmn.io/api/v1/get_market_data/"
+      "https://f68370a9-1a80-4b78-b83c-8cb61539ecd6.mock.pstmn.io/api/v1/get_market_data/",
     );
     const data = await response.json();
     setStockData(data);
